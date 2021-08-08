@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:tourist_app/AllScreen/HostReg.dart';
+import 'package:tourist_app/AllScreen/forgotPassword.dart';
 import 'package:tourist_app/widgets/edgeroundbutton.dart';
 import 'package:tourist_app/widgets/passwordinput.dart';
 import 'package:tourist_app/widgets/textinput.dart';
@@ -62,13 +64,22 @@ class LoginHost extends StatelessWidget {
                           hint: 'Password',
                           inputAction: TextInputAction.done,
                         ),
-                        Text(
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>forgotpssword()),
+                            );
+                          },
+                        child: Text(
                           'Forgot Password?',
                           //      style: TextStyle(
                           //        color: Colors.blue,
                           //      ),
                           // //     style: kBodyText,
                         ),
+                        )
                       ],
                     ),
                     Column(
@@ -82,7 +93,15 @@ class LoginHost extends StatelessWidget {
                         SizedBox(
                           height: 30,
                         ),
-                        Container(
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HostRegistrationScreen()),
+                            );
+                          },
+                        child: Container(
                           decoration: BoxDecoration(
                               border: Border(
                                 bottom:
@@ -95,7 +114,7 @@ class LoginHost extends StatelessWidget {
                             // ),
                             //     style: kBodyText,
                           ),
-                        ),
+                        ),),
                         SizedBox(
                           height: 30,
                         ),

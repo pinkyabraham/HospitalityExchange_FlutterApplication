@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:tourist_app/AllScreen/TouristReg.dart';
+import 'package:tourist_app/AllScreen/guideReg.dart';
 import 'package:tourist_app/widgets/edgeroundbutton.dart';
 import 'package:tourist_app/widgets/passwordinput.dart';
 import 'package:tourist_app/widgets/textinput.dart';
@@ -82,7 +84,15 @@ class LoginGuide extends StatelessWidget {
                         SizedBox(
                           height: 30,
                         ),
-                        Container(
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => GuideRegistrationScreen()),
+                            );
+                          },
+                        child: Container(
                           decoration: BoxDecoration(
                               border: Border(
                                 bottom:
@@ -95,7 +105,7 @@ class LoginGuide extends StatelessWidget {
                             // ),
                             //     style: kBodyText,
                           ),
-                        ),
+                        ),),
                         SizedBox(
                           height: 30,
                         ),

@@ -1,5 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tourist_app/AllScreen/loginGuide.dart';
+
+import 'LoginHost.dart';
+import 'loginScreen.dart';
 
 class HomeScreen extends StatelessWidget {
   _getSizes() {}
@@ -9,12 +13,20 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
-       child:SingleChildScrollView(
-      // padding: new EdgeInsets.only(left: 0.0, bottom: 8.0, right: 16.0),
-      //  decoration: new BoxDecoration(color: Colors.blue),
-      child: Column(
-        children: [
-       Card(
+      child: SingleChildScrollView(
+        // padding: new EdgeInsets.only(left: 0.0, bottom: 8.0, right: 16.0),
+        //  decoration: new BoxDecoration(color: Colors.blue),
+        child: Column(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => LoginScreen()),
+                );
+              },
+            child : Card(
               child: Column(children: [
                 Stack(
                   children: <Widget>[
@@ -25,28 +37,8 @@ class HomeScreen extends StatelessWidget {
                         fit: BoxFit.fitHeight,
                       ),
                     ),
-      // Scaffold(
-      //   backgroundColor: Colors.transparent,
-      //   body: Center(
-      //     child: Center(
-      //         child:Container(
-      //           alignment: Alignment.center,
-      //           padding: const EdgeInsets.symmetric(horizontal: 20),
-      //           decoration: BoxDecoration(
-      //             borderRadius: BorderRadius.circular(15),
-      //             color: Colors.white38,
-      //             boxShadow: [BoxShadow(
-      //               color: Colors.black12,
-      //               blurRadius: 11.0,
-      //               offset: Offset(0, 2),
-      //             ),
-      //             ],
-      //           ),
-      //         ),
-      //     ),
-      //   ),
-      // ),
-                Container(
+
+                    Container(
                       alignment: Alignment.center,
                       child: Column(children: [
                         SizedBox(
@@ -70,7 +62,16 @@ class HomeScreen extends StatelessWidget {
                 ),
               ]),
             ),
-          Card(
+            ),
+      GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => LoginHost()),
+          );
+        },
+            child: Card(
               child: Column(children: [
                 Stack(
                   children: <Widget>[
@@ -106,7 +107,16 @@ class HomeScreen extends StatelessWidget {
                 ),
               ]),
             ),
-          Card(
+      ),
+      GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => LoginGuide()),
+          );
+        },
+           child: Card(
               child: Column(children: [
                 Stack(
                   children: <Widget>[
@@ -142,9 +152,10 @@ class HomeScreen extends StatelessWidget {
                 ),
               ]),
             ),
-        ],
       ),
-       ),
+          ],
+        ),
+      ),
     );
   }
 }

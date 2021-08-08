@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:tourist_app/AllScreen/TouristReg.dart';
 import 'package:tourist_app/widgets/edgeroundbutton.dart';
 import 'package:tourist_app/widgets/passwordinput.dart';
 import 'package:tourist_app/widgets/textinput.dart';
@@ -82,7 +83,15 @@ class LoginScreen extends StatelessWidget {
                             SizedBox(
                               height: 30,
                             ),
-                            Container(
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => TouristRegistrationScreen()),
+                                );
+                              },
+                            child : Container(
                               decoration: BoxDecoration(
                                   border: Border(
                                     bottom:
@@ -95,7 +104,7 @@ class LoginScreen extends StatelessWidget {
                                 // ),
                            //     style: kBodyText,
                               ),
-                            ),
+                            ),),
                             SizedBox(
                               height: 30,
                             ),
