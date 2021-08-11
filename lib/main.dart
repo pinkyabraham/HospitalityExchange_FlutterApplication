@@ -3,6 +3,9 @@ import 'package:tourist_app/AllScreen/HomeScreen.dart';
 import 'package:tourist_app/AllScreen/HostReg.dart';
 import 'package:tourist_app/AllScreen/LoginHost.dart';
 import 'package:tourist_app/AllScreen/MainScreen.dart';
+import 'package:tourist_app/AllScreen/TouristHomePage.dart';
+import 'package:tourist_app/AllScreen/guideChatPage.dart';
+import 'package:tourist_app/AllScreen/guideProfile.dart';
 import 'package:tourist_app/AllScreen/guideReg.dart';
 import 'package:tourist_app/AllScreen/loginScreen.dart';
 import 'package:tourist_app/widgets/SelectImage.dart';
@@ -21,7 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen(),
+      home:MyHomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
